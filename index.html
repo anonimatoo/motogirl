@@ -1,226 +1,215 @@
 <html>
 <head>
-<base href="/" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-cardstudio - Cartões Digitais Profissionais</title>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  body {
-    background: #0a0a0a;
-    color: #fff;
-    min-height: 100vh;
-  }
-
-  .container {
-    max-width: 100%;
-    padding: 20px;
-  }
-
-  .logo-container {
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .logo {
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-  }
-
-  .title {
-    font-size: 2.5em;
-    text-align: center;
-    margin: 20px 0;
-    animation: neon 1.5s ease-in-out infinite alternate;
-    color: #fff;
-    text-shadow: 0 0 5px #fff,
-                 0 0 10px #fff,
-                 0 0 20px #0ff,
-                 0 0 40px #0ff,
-                 0 0 80px #0ff;
-  }
-
-  .developer {
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    animation: neonBlue 2s ease-in-out infinite alternate;
-  }
-
-  .content {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    margin: 20px 0;
-  }
-
-  .features {
-    list-style: none;
-    margin: 20px 0;
-  }
-
-  .features li {
-    margin: 10px 0;
-    padding-left: 25px;
-    position: relative;
-  }
-
-  .features li:before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #0ff;
-  }
-
-  .price {
-    text-align: center;
-    font-size: 2em;
-    color: #ff0;
-    margin: 20px 0;
-    animation: pulsate 1.5s ease-in-out infinite;
-  }
-
-  .cta-button {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
-    padding: 15px;
-    background: linear-gradient(45deg, #00ff00, #00ffff);
-    border: none;
-    border-radius: 25px;
-    color: #000;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    transition: transform 0.3s ease;
-    animation: glow 1.5s ease-in-out infinite alternate;
-  }
-
-  .cta-button:hover {
-    transform: scale(1.05);
-  }
-
-  .specialist-info {
-    text-align: center;
-    margin: 20px 0;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    animation: borderGlow 2s ease-in-out infinite alternate;
-  }
-
-  @keyframes neon {
-    from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0, 0 0 40px #ff0;
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriele Moto Girl - Entregas Profissionais</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
-    to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0, 0 0 40px #ff0, 0 0 80px #ff0;
-    }
-  }
 
-  @keyframes neonBlue {
-    from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff;
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
     }
-    to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
-    }
-  }
 
-  @keyframes pulsate {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
+    .container {
+      max-width: 100%;
+      padding: 15px;
+    }
 
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    .header {
+      background: linear-gradient(45deg, #ff00ff, #00ff00);
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
     }
-    to {
-      box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
-    }
-  }
 
-  @keyframes borderGlow {
-    from {
-      box-shadow: 0 0 10px #0ff;
+    .profile-pic {
+      width: 120px; /* Ajustado para dimensão adequada */
+      height: 120px; /* Ajustado para dimensão adequada */
+      border-radius: 50%;
+      border: 3px solid #00ff00;
+      margin-bottom: 15px;
+      box-shadow: 0 0 25px #00ff00;
     }
-    to {
-      box-shadow: 0 0 20px #0ff;
-    }
-  }
 
-  @media (max-width: 768px) {
-    .title {
-      font-size: 2em;
+    .moto-pic {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px 0;
+      border: 2px solid #ff00ff;
     }
-    
-    .price {
-      font-size: 1.5em;
+
+    .services {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid #00ff00;
+      animation: neonPulse 2s infinite;
     }
-  }
-</style>
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      padding: 10px;
+      background: rgba(255, 0, 255, 0.1);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateX(10px);
+      background: rgba(255, 0, 255, 0.2);
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+      fill: #00ff00;
+    }
+
+    .professional-message {
+      background: linear-gradient(to right, #ff00ff, #00ff00);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 1.2em;
+      text-align: center;
+      padding: 20px;
+      margin: 20px 0;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    }
+
+    @keyframes neonPulse {
+      0% { box-shadow: 0 0 5px #00ff00; }
+      50% { box-shadow: 0 0 20px #00ff00; }
+      100% { box-shadow: 0 0 5px #00ff00; }
+    }
+
+    .contact-button {
+      background: linear-gradient(45deg, #ff00ff, #00ff00);
+      border: none;
+      padding: 15px 30px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      margin: 10px 0;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      border: 1px solid #ff00ff;
+    }
+
+    .author {
+      color: #00ff00;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #00ff00;
+    }
+
+    .e-cardstudio-button {
+      background: linear-gradient(45deg, #00ff00, #ff00ff);
+      border: none;
+      padding: 15px 30px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      margin: 10px 0;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .e-cardstudio-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo-container">
-      <img src="/logo.jpeg" alt="E-cardstudio logo - mural artístico com elementos brasileiros" class="logo" width="300" height="200">
-    </div>
-    
-    <h1 class="title">E-cardstudio</h1>
-    <p class="developer">Desenvolvido por E-cardstudio</p>
+    <header class="header">
+      <img src="logo.jpg" alt="Gabriela - Moto Girl profissional sorrindo com equipamentos de segurança" class="profile-pic">
+      <h1>Gabriela Moto Girl</h1>
+      <p>Entregas rápidas e seguras</p>
+    </header>
 
-    <div class="content">
-      <h2>Criação de Cartão Digital</h2>
-      <p>Modernize sua presença profissional</p>
+    <img src="moto.jpg" alt="Moto Honda personalizada em preto e verde neon" class="moto-pic">
 
-      <ul class="features">
-        <li>Economia com impressões - Nunca mais gaste com cartões físicos!</li>
-        <li>Compartilhamento instantâneo via WhatsApp</li>
-        <li>Com direito a 3 atualizações sem custo adicional</li>
-      </ul>
-
-      <div class="price">
-        🔥 OFERTA BLACK FRIDAY 🔥<br>
-        APENAS R$ 250,00
+    <div class="services">
+      <h2>Nossos Serviços</h2>
+      
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24">
+          <path d="M14,17H12V9H10V7H14M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z"/>
+        </svg>
+        <div>
+          <h3>Entrega de Documentos</h3>
+          <p>Documentos importantes com segurança e agilidade</p>
+        </div>
       </div>
 
-      <p>Garanta já seu cartão digital profissional!</p>
-
-      <div class="specialist-info">
-        <p>Clayton Silva está pronto para criar seu cartão digital personalizado!</p>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24">
+          <path d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z"/>
+        </svg>
+        <div>
+          <h3>Delivery para Restaurantes</h3>
+          <p>Seu pedido entregue com rapidez e qualidade</p>
+        </div>
       </div>
 
-      <a href="https://wa.me/5513974173380" class="cta-button">
-        Falar com Especialista
-      </a>
+      <div class="service-item">
+        <svg class="service-icon" viewBox="0 0 24 24">
+          <path d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+        </svg>
+        <div>
+          <h3>Serviços Bancários</h3>
+          <p>Pagamentos e serviços bancários com segurança</p>
+        </div>
+      </div>
     </div>
+
+    <div class="professional-message">
+      "Compromisso com excelência e pontualidade. Sua entrega em mãos seguras!"
+    </div>
+
+    <button class="contact-button" onclick="window.location.href='https://api.whatsapp.com/send?phone=5511987654321&text=Olá,%20quero%20mais%20informações%20sobre%20os%20serviços.'">Fale Conosco no WhatsApp</button>
+
+    <footer class="footer">
+      <p class="author">Desenvolvido por <span style="color: #ff00ff">E-CardStudio</span></p>
+      <button class="e-cardstudio-button" onclick="window.location.href='https://www.e-cardstudio.com'">Visite nosso site</button>
+    </footer>
   </div>
-
-  <script>
-    document.querySelectorAll('.cta-button').forEach(button => {
-      button.addEventListener('mouseover', () => {
-        button.style.transform = 'scale(1.05)';
-      });
-      button.addEventListener('mouseout', () => {
-        button.style.transform = 'scale(1)';
-      });
-    });
-
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      document.body.classList.add('mobile');
-    }
-  </script>
 </body>
 </html>
